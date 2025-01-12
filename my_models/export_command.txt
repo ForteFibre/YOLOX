@@ -1,0 +1,2 @@
+python3 tools/export_onnx.py --output-name my_models/yolox_s_12000.onnx -f train_config/yolox_s_12000.py -c YOLOX_outputs/yolox_s_12000/best_ckpt.pth
+python3 tools/trt.py -f train_config/yolox_s_4000.py -c YOLOX_outputs/yolox_s_4000/best_ckpt.pth

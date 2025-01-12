@@ -71,7 +71,7 @@ def main():
     logger.info("Converted TensorRT model done.")
     engine_file = os.path.join(file_name, "model_trt.engine")
     engine_file_demo = os.path.join("demo", "TensorRT", "cpp", "model_trt.engine")
-    with open(engine_file, "wb") as f:
+    with open(os.path.join(file_name, "model.trt"), "wb") as f:
         f.write(model_trt.engine.serialize())
 
     shutil.copyfile(engine_file, engine_file_demo)

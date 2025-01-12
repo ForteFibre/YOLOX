@@ -1,0 +1,8 @@
+python3 tools/train.py -f train_config/nano_basketball.py -d 1 -b 16 -o -c base_model/yolox_nano.pth --cache
+
+-f:設定ファイルのパス
+-d:利用するGPUの数
+-b:バッチサイズ
+-o:学習前に利用するGPUメモリを予約する
+-c:学習済みモデルのパス
+--cache:学習済みデータをYOLOXが高速に読み出せる形に変形する。学習データを変更する際はデータセットフォルダ内に生成されたキャッシュデータを削除しないと、データが変更されないので注意が必要。
